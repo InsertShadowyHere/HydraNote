@@ -1,5 +1,6 @@
 Here's a short story to show the final goal:
-John opens up his laptop. There are 80 popup windows telling him to write a journal entry. He has not yet written a journal entry.
+John opens up his laptop. There are 80 popup windows telling him to write a journal entry.
+He has not yet written a journal entry.
 
 How did we get here?
 
@@ -8,7 +9,7 @@ when it doesn't feel like the right time. So John decides he wants to try this p
 kidding, I don't have the budget for those). Upon installation, it asks if there's anything he'd like to push
 himself to do, and he writes down "Write a journal entry!!!" so that he remembers. For repitition, he selects
 "weekly," and for snooze times, he selects "hour-day."uuuuuuuuu8iiujijikjikjikjuu8kijiunjhtrtfmn mn mnmnjm,n mnm njm n mnmmnmnnmnnnnnnnn6tygtfcfgtrdcgrtfcvty
-I was cleaning my keyboard. Anyways, he presses "Begin HydraNote," unknowing of the beast he has just released.
+(sorry had to clean my keyboard) Anyways, he presses "Begin HydraNote," unknowing of the beast he has just released.
 
 To the rest of us, we call it HydraNote. As in, the hydra. The thing with lots of heads that duplicate. The popups
 duplicate too.
@@ -19,7 +20,7 @@ saying "Write a journal entry!!!" John is addicted to League of Legends---take a
 
 One hour passes, and John is still playing League. Take a shower, John! Because an hour has gone by, his faithful,
 perfectly coded, and absolutely beautiful HydraNote companion reminds him to write a journal entry, this time with
-TWO popups! John wants to play another hour of League (can you guess what I'm going to say here?) so he selects
+TWO popups! John wants to play another hour of League (say it with me now!) so he selects
 "snooze for 1 hour" on the first popup he sees. When he presses it, however, the second one remains on the screen.
 
 He presses the same button on the second one, and everything continues as usual. Fast forward six hours, and

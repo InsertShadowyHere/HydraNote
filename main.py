@@ -1,3 +1,4 @@
+import json
 import os
 import tkinter as tk
 import sys
@@ -12,23 +13,17 @@ import time
 
 EXE_PATH = sys.executable
 
-class Note:
-    def __init__(self, message, start, freq, end=None, method="popup"):
-        self.message = message
-        self.start = start
-        self.freq = freq
-        self.end = end
-        self.method = method
-        self.last_snoozed = None
-
 class HydraController:
     """Manages creation and error handling of note instances."""
     def __init__(self):
         self.processes = []
 
-    def create_note_process(self):
-        p = subprocess.Popen([EXE_PATH, "creator.py"])
-        self.processes.append(p)
+    def create_note(self):
+        result = subprocess.run([EXE_PATH, "creator.py"], capture_output=True, text=True)
+        if result.returncode == 0 and result.stdout:
+            proc = subprocess.Popen([EXE_PATH, "note.py", result.stdout])
+            self.processes.append(proc)
+
 
     def stop(self):
         for note in self.processes:
@@ -44,16 +39,17 @@ def create_image():
     draw.ellipse((8, 8, 56, 56), fill="red")
     return image
 
+# TODO: MAKE MENU ITEMS UPDATE WITH LISTS RUNNING
 icon = Icon("HydraNote", icon=Image.open("icon.png"), title="HydraNote",
     menu=Menu(MenuItem("New Note", lambda: HydraController().create_note_process()),
          MenuItem("Quit", lambda: controller.stop())))
 
-def start_tray_icon(ctrl):
+def start_tray_icon():
     # Run the icon in its own thread
     threading.Thread(target=icon.run, daemon=True).start()
 
 if __name__ == "__main__":
     controller = HydraController()
-    start_tray_icon(controller)
+    start_tray_icon()
     while True:
         time.sleep(5)

@@ -1,12 +1,14 @@
 import tkinter as tk
 class Note:
-    def __init__(self, message, start, freq, end=None, method="popup"):
+    def __init__(self, message, end, freq=None):
         self.message = message
-        self.start = start
         self.freq = freq
-        self.end = end
-        self.method = method
+        if end == 0:
+            self.end = None
+        else:
+            self.end = end
         self.last_snoozed = None
+
 
 root = tk.Tk()
 root.title("HydraNote")

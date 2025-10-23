@@ -33,7 +33,7 @@ message = tk.Entry(root, width=50, )
 message.grid(row=3, column=0, columnspan=3, pady=5)
 
 
-def create_note():
+def finish_creation():
     # Placeholder for note creation logic
     # TODO: ERROR HANDLING FOR NOTE TIME INPUT
     note_time = int(mins_inp.get())*60 + int(hrs_inp.get())*3600 + int(days_inp.get())*86400
@@ -50,7 +50,7 @@ def confirm_creation():
     confirmation_label = tk.Label(confirmation, text="Are you sure?\nThis will create a new note.")
     confirmation_label.pack(pady=10)
 
-    conf_yes = tk.Button(confirmation, text="Yes", command=create_note)
+    conf_yes = tk.Button(confirmation, text="Yes", command=finish_creation)
     conf_yes.pack(side="right", padx=10, pady=10)
 
     conf_no = tk.Button(confirmation, text="No", command=confirmation.destroy)
